@@ -11,6 +11,10 @@ module NativeZig =
     [<DllImport(@"..\..\..\..\native_zig\zig-out\bin\native_zig", EntryPoint = "hello")>]
     extern void Hello()
 
+module NativeFSharp =
+    [<DllImport(@"..\..\..\..\native_fsharp\bin\Release\net9.0\win-x64\publish\native_fsharp", EntryPoint = "hello")>]
+    extern void Hello()
+
 [<EntryPoint>]
 let main _ =
     NativeRust.Hello()
@@ -19,5 +23,7 @@ let main _ =
     printfn "Result: %d" result
 
     NativeZig.Hello()
+
+    NativeFSharp.Hello()
 
     0
