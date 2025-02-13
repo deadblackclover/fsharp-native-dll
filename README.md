@@ -15,3 +15,9 @@ Use version 0.13.0 to compile the library
 ```sh
 zig build
 ```
+
+### Build native_fsharp
+
+```sh
+dotnet publish -c Release -r <RUNTIME_IDENTIFIER> --self-contained
+```
